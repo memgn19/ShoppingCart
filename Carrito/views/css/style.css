@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#login{
+    background: url(../imgs/fon.png);
+    background-size: cover;
+}
+
+#registrar{
+    background: url(../imgs/fondo.png);
+    background-size: cover;
+}
+
+#product{
+    background: url(../imgs/fondo3.png);
+    background-size: cover;
+}
+
+#cont{
+    display: flex;
+    color: black;
+    font-weight: bolder;
+    top: 25%;
+    backdrop-filter: blur(5px);
+}
+
+#link a:hover{
+    color: rgb(68, 68, 68);
+
+}
