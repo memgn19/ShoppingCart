@@ -1,46 +1,73 @@
-#header li a svg, #out_icon{
-    filter: invert(1);
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
+
+
+#login {
+  display: none;
+  border-radius: 15px;
 }
 
-#login{
-    display: none;
-    border-radius: 15px;
+#registrar {
+  display: none;
+  border-radius: 15px;
 }
 
-#registrar{
-    display: none;
-    border-radius: 15px;
+#product {
+  display: none;
+  border-radius: 15px;
 }
 
-#product{
-    display: none;
-    border-radius: 15px;
+#include {
+  z-index: 1;
+  width: 650px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
 }
 
-#include{
-    z-index: 1;
-    width: 650px;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
+#include2 {
+  z-index: 2;
+  width: 650px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
 }
 
-#include2{
-    z-index: 2;
-    width: 650px;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
+#include3 {
+  z-index: 3;
+  width: 700px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
 }
 
-#include3{
-    z-index: 3;
-    width: 700px;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
+#cart_product {
+  font-size: 1.6rem;
 }
 
-#cart_product{
-    font-size: 1.6rem;
+.header-bg {
+  background-color: white;
+  border-bottom: 1px solid black;
 }
+
+.title {
+  font-family: "Lora", serif;
+  font-weight: bold;
+}
+
+.bg-body{
+  background-image: url(../imgs/bgg.png);
+}
+
+#add, #button2, #button1{
+ background-color: #ffb5c7;
+ color: white;
+ font-weight: bolder;
+  border: none;
+}
+
+#search{
+  border: solid 2px #ffb5c7;
+}
+
+.foot{
+  background: linear-gradient(to bottom, #ffffff 0%, #fffcf0 50%, #ffded6 100%);}

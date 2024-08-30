@@ -14,7 +14,8 @@
 }
 
 #product{
-    background: url(../imgs/fondo3.png);
+    background: rgba(255, 255, 255, 0.394); 
+    backdrop-filter: blur(10px); /* Adjust blur intensity as needed */
     background-size: cover;
 }
 
