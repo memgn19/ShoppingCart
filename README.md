@@ -1,6 +1,8 @@
 <h1 style="text-align: center;">👛 Shopping Cart App 👛</h1>
 I created this online store with an emphasis on an asynchronous shopping cart. The development was done mainly with pure PHP and vanilla JavaScript, providing a seamless and responsive shopping experience.
 
+![Miniatura](Carrito/assets/miniatura.gif)
+
 # Features ✨
 - Users can add products to the cart. 🛒
 - Users can asynchronously adjust the quantity of products in the cart. 🛍️
