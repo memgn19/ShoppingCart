@@ -1,8 +1,7 @@
 <h1 style="text-align: center;">👛 Shopping Cart App 👛</h1>
 I created this online store with an emphasis on an asynchronous shopping cart. The development was done mainly with pure PHP and vanilla JavaScript, providing a seamless and responsive shopping experience.
 
-
-![miniatura]([https://github.com/s-shemmee/React-Weather-App/assets/56132945/a3aea312-a726-40c6-93bb-45261ecddcad](https://github.com/memgn19/ShoppingCart/blob/main/Carrito/assets/miniatura.gif))
+![Miniatura](Carrito/assets/miniatura.gif)
 
 # Features ✨
 - Users can add products to the cart. 🛒
