@@ -26,21 +26,23 @@ session_start(); ?>
         </symbol>
         <svg id="cart" viewBox="0 0 16 16">
             <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
-    </svg>
-    <!-- ajax -->
-    <script src="JS/ajaxCart.js"></script>
+        </svg>
+        <!-- ajax -->
+        <script src="JS/ajaxCart.js"></script>
         <title>Shopping Cart</title>
 </head>
 
-<body>
+<body class="bg-body">
     <!-- Inicio de navbar-->
-    <div class="px-3 py-2 text-bg-dark border-bottom border-dark">
+    <div class="px-3 py-2 ">
         <div class="container">
             <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-                <a href="index.php" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
-                    <img src="imgs/logo.png" alt="logo" height="100">
-                </a>
-                <h1 class="text-start me-5">Shopping Cart</h1>
+                <div class="d-flex align-items-center me-auto">
+                    <a href="index.php" class="d-flex align-items-center my-2 my-lg-0 text-white text-decoration-none">
+                        <img src="imgs/logo.png" alt="logo" width="100">
+                    </a>
+                    <h3 class="ms-3 mt-1 title text-black">Shopping Cart</h3>
+                </div>
                 <ul id="header" class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
                     <li>
                         <a href="index.php" class="nav-link text-secondary">
@@ -51,7 +53,7 @@ session_start(); ?>
                         </a>
                     </li>
                     <li>
-                        <a href="carrito.php" class="nav-link text-white">
+                        <a href="carrito.php" class="nav-link text-black">
                             <svg class="bi d-block mx-auto mb-1" width="24" height="24">
                                 <use xlink:href="#cart"></use>
                             </svg>
@@ -71,55 +73,56 @@ session_start(); ?>
         </div>
     </div>
     <!-- Final nav bar  -->
-    <h2 class="m-4">Shopping cart</h2>
-    <?php
+    <main class="min-vh-100">
+        <h2 class="m-4 title">Shopping cart</h2>
+        <?php
 
 
-    /*  if (empty($_SESSION['customer'])) {
+        /*  if (empty($_SESSION['customer'])) {
         $msj = "Para acceder al carrito tienes que estar registrado.";
         header("Location:products.php?message=" . $msj);
     }
 */
-    //echo "<h1> Hola " . $_SESSION['customer']['name'] . "</h1>";
+        //echo "<h1> Hola " . $_SESSION['customer']['name'] . "</h1>";
 
 
-    ?>
-    <!-- Inicio PRODUCTOS  -->
-    <div class="my-3 p-3 bg-body rounded shadow-sm m-5" id="cart_product">
-        <!-- A partir de este se borra cuando se haga el foreach  -->
-        <?php
-            if(isset($_SESSION['cart'])){
-                foreach ($_SESSION['cart'] as $columns){
-                    if(is_int($columns) or is_float($columns)){
+        ?>
+        <!-- Inicio PRODUCTOS  -->
+        <div class="my-3 p-3 rounded shadow-sm m-5" id="cart_product">
+            <!-- A partir de este se borra cuando se haga el foreach  -->
+            <?php
+            if (isset($_SESSION['cart'])) {
+                foreach ($_SESSION['cart'] as $columns) {
+                    if (is_int($columns) or is_float($columns)) {
                         continue;
                     }
-                    ?>
-                        <div id="<?='prod' . $columns['id']?>" class="d-flex text-body-secondary pt-3">
-                            <img src="<?='../Data/' . $columns['img'] ?>" alt='product image' width='80' height='80' class="bd-placeholder-img flex-shrink-0 me-2 mt-2 rounded">
-                            <div class="pb-2 mb-0 lh-sm border-bottom w-100">
-                                <div class="d-flex justify-content-between">
-                                    <strong class="text-dark fs-3"><?= $columns['name'] ?></strong>
-                                    <p class="fs-5 mt-1"><?= $columns['price'] ?></p>
-                                </div>
-                                <div class="btn-group float-start ">
-                                    <form action="" method="POST" class="add_substract">
-                                        <button id="<?= $columns['id']?>" value="add" class="btn btn-dark me-2 rounded-5 plus">+</button>
-                                        <button id="<?= $columns['id']?>" value="delete" class="btn btn-dark ms-1 rounded-5 pe-3 ps-3 subtract">-</button>
-                                    </form>
-                                </div>
-                                <div class="d-flex pt-4 mt-5 fs-4 justify-content-between">
-                                    <p id="<?='qty' . $columns['id']?>" class="qty"><?= $columns['qty'] ?></p>
-                                    <p id="<?='sub' . $columns['id']?>" class="subtotal" class="fs-5 mt-1"><?= $columns['subtotal'] ?></p>
-                                </div>
+            ?>
+                    <div id="<?= 'prod' . $columns['id'] ?>" class="d-flex text-body-secondary pt-3">
+                        <img src="<?= '../Data/' . $columns['img'] ?>" alt='product image' width='80' height='80' class="bd-placeholder-img flex-shrink-0 me-2 mt-2 rounded">
+                        <div class="pb-2 mb-0 lh-sm border-bottom w-100">
+                            <div class="d-flex justify-content-between">
+                                <strong class="text-dark fs-3"><?= $columns['name'] ?></strong>
+                                <p class="fs-5 mt-1"><?= $columns['price'] ?></p>
+                            </div>
+                            <div class="btn-group float-start ">
+                                <form action="" method="POST" class="add_substract">
+                                    <button id="<?= $columns['id'] ?>" value="add" class="btn btn-dark me-2 rounded-5 plus">+</button>
+                                    <button id="<?= $columns['id'] ?>" value="delete" class="btn btn-dark ms-1 rounded-5 pe-3 ps-3 subtract">-</button>
+                                </form>
+                            </div>
+                            <div class="d-flex pt-4 mt-5 fs-4 justify-content-between">
+                                <p id="<?= 'qty' . $columns['id'] ?>" class="qty"><?= $columns['qty'] ?></p>
+                                <p id="<?= 'sub' . $columns['id'] ?>" class="subtotal" class="fs-5 mt-1"><?= $columns['subtotal'] ?></p>
                             </div>
                         </div>
-                    <?php
+                    </div>
+            <?php
                 }
             }
-        ?>
-        
-    </div>
-    <?php
+            ?>
+
+        </div>
+        <?php
         //Para eliminar los productos del carrito
         if (isset($_GET['delete'])) {
             echo $did = $_GET['id'];
@@ -154,37 +157,39 @@ session_start(); ?>
                     <?php
                     }
                 }
-                */ 
-    ?>
-    <!-- DIVS de cerrado de las de arriba </div>
+                */
+        ?>
+        <!-- DIVS de cerrado de las de arriba </div>
     </div> -->
 
-
-    <div class="container float-end">
-        <div class="float-end text-end my-5 me-5">
-            <p class="fs-3">Total</p>
-            <p id="total"><?= !empty($_SESSION['cart']['total'])? $_SESSION['cart']['total'] . ' €' : 0 ?></p>
-            <hr>
-            <div class="btn-group">
-                <button name="action" id="pay" value="Complete Purchase" type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#complete">Complete Purchase </button>
-                 <!-- Button trigger modal -->
+        <div class="container float-end">
+            <div class="float-end text-end my-5 me-5">
+                <p class="fs-3">Total</p>
+                <p id="total"><?= !empty($_SESSION['cart']['total']) ? $_SESSION['cart']['total'] . ' €' : 0 ?></p>
+                <hr>
+                <div class="btn-group">
+                    <button name="action" id="pay" value="Complete Purchase" type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#complete">Complete Purchase </button>
+                    <!-- Button trigger modal -->
                     <div class="modal" id="complete" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                      <div class="modal-dialog">
-                        <div class="modal-content">
-                          <div class="modal-body text-center">
-                           Your purchase has been completed! Thanks! 💗
-                          <div class="modal-footer">               
-                            <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Ok</button>
-                          </div>
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-body text-center">
+                                    Your purchase has been completed! Thanks! 💗
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Ok</button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                      </div>
-            </div>
-        </div>
-    </div>
+                    </div>
+                </div>
+    </main>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="JS/ajaxCart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
 </body>
+
 
 </html>

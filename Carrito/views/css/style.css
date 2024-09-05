@@ -3,28 +3,17 @@
     padding: 0;
 }
 
-#login{
-    background: url(../imgs/fon.png);
-    background-size: cover;
-}
-
-#registrar{
-    background: url(../imgs/fondo.png);
-    background-size: cover;
-}
-
-#product{
+#product, #login, #registrar{
     background: rgba(255, 255, 255, 0.394); 
     backdrop-filter: blur(10px); /* Adjust blur intensity as needed */
     background-size: cover;
 }
 
-#cont{
+#contg{
     display: flex;
-    color: black;
+    color: rgb(255, 0, 0);
     font-weight: bolder;
     top: 25%;
-    backdrop-filter: blur(5px);
 }
 
 #link a:hover{

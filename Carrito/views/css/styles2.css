@@ -56,6 +56,8 @@
 
 .bg-body{
   background-image: url(../imgs/bgg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 #add, #button2, #button1{
@@ -67,6 +69,17 @@
 
 #search{
   border: solid 2px #ffb5c7;
+}
+
+.text-clamp {
+  display: -webkit-box; /* Required for -webkit-line-clamp */
+  display: box; /* Standard property for line-clamp */
+  -webkit-line-clamp: 3; /* Limits the text to 3 lines for webkit browsers */
+  line-clamp: 3; /* Standard property to limit text to 3 lines */
+  -webkit-box-orient: vertical; /* For webkit browsers */
+  box-orient: vertical; /* Standard property */
+  overflow: hidden; /* Hides the overflow text */
+  text-overflow: ellipsis; /* Adds ellipsis (...) at the end of the visible text */
 }
 
 .foot{

@@ -169,11 +169,11 @@ session_start();
           ?>
               <div class="col">
                 <div class="card shadow-sm ms-2">
-                  <img src='<?= '../Data/' . $row['foto']; ?>' alt='product image' width='100%' height='225'>
+                  <img src='<?= '../Data/' . $row['foto']; ?>' alt='product image' width='100%' height='250'>
                   <div class="card-body">
                     <h3 class="class-text text-center"><?php echo $row["name"]; ?></h3>
                     <p class="class-text"><?php echo $row["price"] . " €";  ?></p>
-                    <p class="card-text"><?php echo $row["description"]; ?></p>
+                    <p class="card-text text-clamp"><?php echo $row["description"]; ?></p>
                     <div class="d-flex justify-content-between align-items-center">
                       <div class="btn-group">
                         <form class="prod" action="" method='POST'>
@@ -224,7 +224,9 @@ session_start();
   <footer class="pd-flex min-vh-50 mt-auto justify-content-end align-items-end py-4 border-5 foot">
     <div class="d-flex justify-content-center">
     <ul class="nav col-md-4 justify-content-center">
-      <li class="nav-item"><a href="#" class="nav-link text-black">Elena Moreno</a></li>
+      <li class="nav-item"> <a href="https://github.com/memgn19" class="nav-link text-black"> Coded by Elena Moreno </a></li>
+      <li class="nav-item"><a href="https://github.com/memgn19" class="nav-link text-black"> <img src="./imgs/github.png" width="20px"/></a></li>
+      <li class="nav-item"><a href="https://www.linkedin.com/in/elena-moreno-a63197293/" class="nav-link text-black"><img src="./imgs/linkedin-logo.png" width="20px"/></a></li>
     </ul>
     </div>
   </footer>
