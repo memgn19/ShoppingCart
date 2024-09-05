@@ -9,11 +9,12 @@
     background-size: cover;
 }
 
-#contg{
+#cont{
     display: flex;
-    color: rgb(255, 0, 0);
+    color: black;
     font-weight: bolder;
     top: 25%;
+    backdrop-filter: blur(5px);
 }
 
 #link a:hover{

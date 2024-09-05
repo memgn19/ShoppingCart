@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 28-11-2023 a las 22:21:54
--- Versión del servidor: 10.4.28-MariaDB
--- Versión de PHP: 8.2.4
+-- Tiempo de generación: 05-09-2024 a las 20:21:20
+-- Versión del servidor: 10.4.32-MariaDB
+-- Versión de PHP: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -40,7 +40,8 @@ CREATE TABLE `customers` (
 --
 
 INSERT INTO `customers` (`customerId`, `name`, `email`, `phone`, `password`) VALUES
-(1, 'memgn', 'mar@gmail.com', '123456676', '1234');
+(1, 'memgn', 'mar@gmail.com', '123456676', '1234'),
+(2, 'memgn', 'marlen4192@gmail.com', '12345689', '1234');
 
 -- --------------------------------------------------------
 
@@ -85,6 +86,18 @@ CREATE TABLE `products` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
+-- Volcado de datos para la tabla `products`
+--
+
+INSERT INTO `products` (`idProduct`, `name`, `price`, `foto`, `description`) VALUES
+(4, 'Yellow Candle', 18.00, 'imgs/1725537094-vela amarilla.jpg', 'Yellow candle with a soothing vanilla scent, perfect for creating a cozy and relaxing atmosphere. Burns for up to 14 hours, adding warmth and comfort to any space.'),
+(5, 'Yellow Kit', 54.00, 'imgs/1725537152-kit.jpg', 'This delightful kit includes a set of yellow vanilla-scented candles, each with a 14-hour burn time, perfect for creating a cozy ambiance. Also included is a beautiful yellow bowl and a pair of elegant vases, adding a touch of style and warmth to any space.'),
+(6, 'Decorative Vases', 60.00, 'imgs/1725537259-kit jarrones.jpg', 'Set of six decorative vases in various shapes and styles, perfect for adding elegance and charm to any space. Ideal for fresh flowers, dried arrangements, or as standalone decor pieces.'),
+(7, 'Pink and Green Set', 230.00, 'imgs/1725537751-platos.jpg', 'Bring a touch of spring to your table with this beautiful collection of pink and green plates. Featuring soft, pastel hues and elegant designs, these plates are perfect for adding a fresh, vibrant feel to any meal. Ideal for spring gatherings, brunches, or everyday use, they effortlessly blend style and functionality, making every dining experience delightful'),
+(8, 'Fall Candles', 35.00, 'imgs/1725537840-tres velas.jpg', 'Set of three pumpkin-scented candles, perfect for fall. Each candle offers a warm, inviting aroma and rich autumnal color, creating a cozy atmosphere for the season'),
+(9, 'Scented candle', 5.00, 'imgs/1725537886-vela sola.jpg', 'This lavender-scented candle is perfect for adding a touch of elegance to your room\'s decor. Its calming fragrance creates a soothing atmosphere, making it ideal for relaxation and ambiance. The stylish design complements any interior, making it both a beautiful and functional addition to your home.');
+
+--
 -- Índices para tablas volcadas
 --
 
@@ -123,7 +136,7 @@ ALTER TABLE `products`
 -- AUTO_INCREMENT de la tabla `customers`
 --
 ALTER TABLE `customers`
-  MODIFY `customerId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `customerId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `orders`
@@ -141,7 +154,7 @@ ALTER TABLE `order_items`
 -- AUTO_INCREMENT de la tabla `products`
 --
 ALTER TABLE `products`
-  MODIFY `idProduct` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `idProduct` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- Restricciones para tablas volcadas
