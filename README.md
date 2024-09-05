@@ -1,7 +1,7 @@
 <h1 style="text-align: center;">👛 Shopping Cart App 👛</h1>
 I created this online store with an emphasis on an asynchronous shopping cart. The development was done mainly with pure PHP and vanilla JavaScript, providing a seamless and responsive shopping experience.
 
-![Miniatura](Carrito/assets/miniatura.gif)
+![Minuatura-img](Carrito/assets/miniatura.png)
 
 # Features ✨
 - Users can add products to the cart. 🛒
@@ -25,6 +25,9 @@ To use this app, first you need to follow these steps:
 - Create a database named 'carrito' and import the SQL script found in the Data folder.
 - Open the project in your preferred code editor.
 - Launch your browser and navigate to `(http://localhost/ShoppingCart/Carrito/views/index.php)` to use the app.
+
+# Demo 👝
+![Miniatura](Carrito/assets/miniatura.gif)
 
 # License
 This project is licensed under the MIT license.
